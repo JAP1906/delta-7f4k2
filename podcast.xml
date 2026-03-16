@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-
 <title>NotebookLM2Overcast</title>
 <description>Audios NotebookLM</description>
 <link>https://github.com/JAP1906/notebooklm-podcast</link>
+
+<item>
+<title>20260218 - Decisão 🇫🇷 Cloudflare</title>
+<description>1. O Tribunal de Justiça de Paris determinou que a Cloudflare deve implementar medidas de bloqueio contra 16 domínios e serviços de IPTV que transmitem ilegalmente jogos da Premier League, protegendo os direitos exclusivos de exploração do Grupo Canal+
+2. A sentença classifica a Cloudflare como um intermediário técnico (fornecedor de DNS, CDN e proxy reverso) com capacidade para impedir o acesso a conteúdos infratores, rejeitando os argumentos de defesa da empresa sobre a sua suposta falta de legitimidade passiva
+3. Estas medidas de bloqueio aplicam-se ao território francês até 24 de maio de 2026, prevendo-se ainda a colaboração com a ARCOM para identificar e bloquear novos serviços que venham a surgir ilegalmente durante o resto da temporada</description>
+<enclosure url="https://drive.google.com/uc?export=download&id=10qdmjnQUCC6AkziR-nRef22a5fI4ypaY" length="0" type="audio/mp4"/>
+<guid>episode1</guid>
+</item>
 
 </channel>
 </rss>

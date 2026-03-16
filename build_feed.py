@@ -33,14 +33,22 @@ for k,v in episodes.items():
     if "audio" in v and "meta" in v:
         meta = service.files().get_media(fileId=v["meta"]).execute().decode()
 
-        title=""
-        desc=""
+        lines = [l.strip() for l in meta.splitlines() if l.strip()]
 
-        for line in meta.splitlines():
-            if line.startswith("Titulo:"):
-                title=line.replace("Titulo:","").strip()
-            if line.startswith("Descricao:"):
-                desc=line.replace("Descricao:","").strip()
+        title = ""
+        desc = ""
+
+        for i,l in enumerate(lines):
+            if l.startswith("Titulo"):
+                if ":" in l and len(l.split(":")[1].strip()) > 0:
+                    title = l.split(":",1)[1].strip()
+                else:
+                    title = lines[i+1]
+            if l.startswith("Descricao"):
+                if ":" in l and len(l.split(":")[1].strip()) > 0:
+                    desc = l.split(":",1)[1].strip()
+                else:
+                    desc = "\n".join(lines[i+1:])
 
         audio_url=f"https://drive.google.com/uc?export=download&id={v['audio']}"
 
@@ -57,7 +65,7 @@ for k,v in episodes.items():
 rss=f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<title>NotebookLM Audio</title>
+<title>NotebookLM2Overcast</title>
 <description>Audios NotebookLM</description>
 <link>https://github.com/JAP1906/notebooklm-podcast</link>
 {''.join(items)}

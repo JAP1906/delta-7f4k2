@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<title>NotebookLM Audio</title>
+
+<title>NotebookLM2Overcast</title>
 <description>Audios NotebookLM</description>
 <link>https://github.com/JAP1906/notebooklm-podcast</link>
 

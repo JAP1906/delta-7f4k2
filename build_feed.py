@@ -50,7 +50,7 @@ for k,v in episodes.items():
                 else:
                     desc = "\n".join(lines[i+1:])
 
-        audio_url=f"https://drive.google.com/uc?export=download&id={v['audio']}"
+        audio_url=f"https://drive.usercontent.google.com/download?id={v['audio']}&amp;export=download"
 
         item=f"""
 <item>
@@ -73,4 +73,4 @@ rss=f"""<?xml version="1.0" encoding="UTF-8"?>
 </rss>
 """
 
-open("podcast.xml","w").write(rss)
+open("feed-n3vx8kp2.xml","w").write(rss)

@@ -35,4 +35,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: update feed
-          file_pattern: podcast.xml
+          file_pattern: feed-n3vx8kp2.xml
